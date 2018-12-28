@@ -38,7 +38,7 @@ class ReportsController < ApplicationController
   def destroy
     @report.destroy
 
-    redirect_to root_path
+    redirect_to root_path, notice: 'Report has been successfully deleted'
   end
 
   private

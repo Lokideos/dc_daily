@@ -2,3 +2,4 @@ h1= @report.title
 p= @report.description
 
 = link_to 'Edit Report', edit_report_path(@report)
+= link_to 'Delete Report', report_path(@report), method: :delete
