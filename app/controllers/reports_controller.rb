@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ReportsController < ApplicationController
-  before_action :load_report, only: %i[show edit update]
+  before_action :load_report, only: %i[show edit update destroy]
   def new
     @report = Report.new
   end
@@ -28,6 +28,12 @@ class ReportsController < ApplicationController
       flash[:notice] = 'There were some errors in your input.'
       render :edit
     end
+  end
+
+  def destroy
+    @report.destroy
+
+    redirect_to root_path
   end
 
   private

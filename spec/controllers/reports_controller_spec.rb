@@ -111,6 +111,20 @@ RSpec.describe ReportsController, type: :controller do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    let!(:report) { create(:report) }
+
+    it 'deletes the report from the database' do
+      expect { delete :destroy, params: { id: report } }.to change(Report, :count).by(-1)
+    end
+
+    it 'redirects to root path' do
+      delete :destroy, params: { id: report }
+
+      expect(response).to redirect_to root_path
+    end
+  end
 end
 # rubocop:enable Metrics/BlockLength
 # rubocop:enable Metrics/LineLength
