@@ -3,7 +3,22 @@
 require 'rails_helper'
 
 # rubocop:disable Metrics/BlockLength
+# rubocop:disable Metrics/LineLength
 RSpec.describe ReportsController, type: :controller do
+  describe 'GET #index' do
+    let(:reports) { create_list(:report, 3) }
+
+    before { get :index }
+
+    it 'populates an array of reports' do
+      expect(assigns(:reports)).to match_array(reports)
+    end
+
+    it 'render index view' do
+      expect(response).to render_template :index
+    end
+  end
+
   describe 'GET #new' do
     before { get :new }
 
@@ -27,6 +42,20 @@ RSpec.describe ReportsController, type: :controller do
 
     it 'renders show template' do
       expect(response).to render_template :show
+    end
+  end
+
+  describe 'GET #edit' do
+    let(:report) { create(:report) }
+
+    before { get :edit, params: { id: report } }
+
+    it 'assigns correct report to @report' do
+      expect(assigns(:report)).to eq report
+    end
+
+    it 'renders edit template' do
+      expect(response).to render_template :edit
     end
   end
 
@@ -55,5 +84,61 @@ RSpec.describe ReportsController, type: :controller do
       end
     end
   end
+
+  describe 'PATCH #update' do
+    let(:report) { create(:report) }
+
+    context 'with valid attributes' do
+      it 'assign the correct question' do
+        patch :update, params: { id: report, report: attributes_for(:report) }
+
+        expect(assigns(:report)).to eq assigns(:report)
+      end
+
+      it 'updates the report attributes' do
+        patch :update, params: { id: report, report: { title: 'New Report Title', description: 'New Report Description' } }
+        report.reload
+
+        expect(assigns(:report).title).to eq 'New Report Title'
+        expect(assigns(:report).description).to eq 'New Report Description'
+      end
+
+      it 'redirects to update report' do
+        patch :update, params: { id: report, report: { title: 'New Report Title' } }
+
+        expect(response).to redirect_to assigns(:report)
+      end
+    end
+
+    context 'with invalid attributes' do
+      before { patch :update, params: { id: report, report: attributes_for(:report, :invalid) } }
+
+      it 'does not update the report' do
+        report.reload
+
+        expect(report.title).to eq 'MyString'
+        expect(report.description).to eq 'MyText'
+      end
+
+      it 're-renders edit view' do
+        expect(response).to render_template :edit
+      end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    let!(:report) { create(:report) }
+
+    it 'deletes the report from the database' do
+      expect { delete :destroy, params: { id: report } }.to change(Report, :count).by(-1)
+    end
+
+    it 'redirects to root path' do
+      delete :destroy, params: { id: report }
+
+      expect(response).to redirect_to root_path
+    end
+  end
 end
 # rubocop:enable Metrics/BlockLength
+# rubocop:enable Metrics/LineLength

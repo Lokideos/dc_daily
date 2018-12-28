@@ -1,4 +1,4 @@
-h1 New Report
+h1= @report.title
 
 = render 'shared/errors', resource: @report
 = form_with model: @report do |f|
@@ -8,4 +8,4 @@ h1 New Report
   = f.label :description
   = f.text_area :description
 
-  = f.submit 'Create Report'
+  = f.submit 'Update Report'
