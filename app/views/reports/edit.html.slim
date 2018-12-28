@@ -1,7 +1,7 @@
-h1= @report.title
+h1= report.title
 
-= render 'shared/errors', resource: @report
-= form_with model: @report do |f|
+= render 'shared/errors', resource: report
+= form_with model: report do |f|
   = f.label :title
   = f.text_field :title
 
