@@ -22,10 +22,6 @@ RSpec.describe ReportsController, type: :controller do
   describe 'GET #new' do
     before { get :new }
 
-    it 'assigns a new Report to @report' do
-      expect(assigns(:report)).to be_a_new(Report)
-    end
-
     it 'should render new template' do
       expect(response).to render_template :new
     end
@@ -36,10 +32,6 @@ RSpec.describe ReportsController, type: :controller do
 
     before { get :show, params: { id: report } }
 
-    it 'assigns correct report to @report' do
-      expect(assigns(:report)).to eq report
-    end
-
     it 'renders show template' do
       expect(response).to render_template :show
     end
@@ -49,10 +41,6 @@ RSpec.describe ReportsController, type: :controller do
     let(:report) { create(:report) }
 
     before { get :edit, params: { id: report } }
-
-    it 'assigns correct report to @report' do
-      expect(assigns(:report)).to eq report
-    end
 
     it 'renders edit template' do
       expect(response).to render_template :edit
