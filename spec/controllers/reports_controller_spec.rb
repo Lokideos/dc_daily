@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 # rubocop:disable Metrics/BlockLength
-# # rubocop:disable Metrics/LineLength
+# rubocop:disable Metrics/LineLength
 RSpec.describe ReportsController, type: :controller do
   describe 'GET #new' do
     before { get :new }
