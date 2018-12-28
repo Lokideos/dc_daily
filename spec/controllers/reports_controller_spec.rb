@@ -5,6 +5,20 @@ require 'rails_helper'
 # rubocop:disable Metrics/BlockLength
 # rubocop:disable Metrics/LineLength
 RSpec.describe ReportsController, type: :controller do
+  describe 'GET #index' do
+    let(:reports) { create_list(:report, 3) }
+
+    before { get :index }
+
+    it 'populates an array of reports' do
+      expect(assigns(:reports)).to match_array(reports)
+    end
+
+    it 'render index view' do
+      expect(response).to render_template :index
+    end
+  end
+
   describe 'GET #new' do
     before { get :new }
 

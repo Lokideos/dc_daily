@@ -2,6 +2,11 @@
 
 class ReportsController < ApplicationController
   before_action :load_report, only: %i[show edit update destroy]
+
+  def index
+    @reports = Report.all
+  end
+
   def new
     @report = Report.new
   end
