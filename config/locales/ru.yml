@@ -11,6 +11,7 @@ ru:
     index:
       headline: 'Все Отчеты'
     new:
+      headline: 'Новый Отчет'
       create: 'Создать Отчет'
     show:
       edit: 'Редактировать Отчет'

@@ -40,6 +40,7 @@ en:
     index:
       headline: 'All Reports'
     new:
+      headline: 'New Report'
       create: 'Create Report'
     show:
       edit: 'Edit Report'
