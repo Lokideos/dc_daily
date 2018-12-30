@@ -7,7 +7,14 @@ ru:
         one: '%{count} ошибка обнаружена:'
         other: '%{count} ошибки обнаружено:'
 
+  common:
+    invalid_attributes_error: 'В введенных вами данных несколько ошибок.'
+
   reports:
+    notification:
+      created: 'Отчет был успешно создан.'
+      updated: 'Отчет был успешно обновлен.'
+      deleted: 'Отчет был успешно удален.'
     index:
       headline: 'Все Отчеты'
     new:

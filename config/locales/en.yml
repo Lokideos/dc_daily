@@ -36,7 +36,14 @@ en:
         one: '%{count} error detected:'
         other: '%{count} errors detected:'
 
+  common:
+    invalid_attributes_error: 'There were some errors in your input.'
+
   reports:
+    notification:
+      created: 'Report has been successfully created.'
+      updated: 'Report has been successfully updated.'
+      deleted: 'Report has been successfully deleted'
     index:
       headline: 'All Reports'
     new:
