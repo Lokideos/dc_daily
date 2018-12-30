@@ -52,3 +52,6 @@ en:
     new:
       headline: 'New Temperature Report'
       create: 'Create Temperature Report'
+    edit:
+      headline: 'Edit Temperature Report'
+      update: 'Update Temperature Report'
