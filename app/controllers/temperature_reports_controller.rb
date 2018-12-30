@@ -3,6 +3,8 @@
 class TemperatureReportsController < ApplicationController
   def new; end
 
+  def show; end
+
   def create
     @temperature_report = report.temperature_reports.create(temperature_report_params)
     redirect_to temperature_report, notice: 'Temperature report has been successfully created.'
