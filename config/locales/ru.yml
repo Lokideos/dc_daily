@@ -18,3 +18,8 @@ ru:
       delete: 'Удалить Отчет'
     edit:
       update: 'Обновить Отчет'
+
+  temperature_reports:
+    new:
+      headline: 'Новый Отчет о Температуре'
+      create: 'Создать Отчет о Температуре'

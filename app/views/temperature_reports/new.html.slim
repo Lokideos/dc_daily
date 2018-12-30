@@ -1,8 +1,8 @@
-h1 New Temperature Report
+h1= t('.headline')
 
 = render 'shared/errors', resource: temperature_report
 = form_with model: [report, temperature_report] do |f|
   = f.label :title
   = f.text_field :title
 
-  = f.submit 'Create Temperature Report'
+  = f.submit t('.create')
