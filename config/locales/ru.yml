@@ -1,0 +1,15 @@
+ru:
+  shared:
+    errors:
+      errors_counter:
+        one: '%{count} ошибка обнаружена:'
+        other: '%{count} ошибки обнаружено:'
+
+  reports:
+    new:
+      create: 'Создать Отчет'
+    show:
+      edit: 'Редактировать Отчет'
+      delete: 'Удалить Отчет'
+    edit:
+      update: 'Обновить Отчет'
