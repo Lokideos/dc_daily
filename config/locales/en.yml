@@ -37,6 +37,8 @@ en:
         other: '%{count} errors detected:'
 
   reports:
+    index:
+      headline: 'All Reports'
     new:
       create: 'Create Report'
     show:

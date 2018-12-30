@@ -8,6 +8,8 @@ ru:
         other: '%{count} ошибки обнаружено:'
 
   reports:
+    index:
+      headline: 'Все Отчеты'
     new:
       create: 'Создать Отчет'
     show:
