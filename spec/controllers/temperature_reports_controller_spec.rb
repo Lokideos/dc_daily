@@ -3,6 +3,7 @@
 require 'rails_helper'
 
 # rubocop:disable Metrics/LineLength
+# rubocop:disable Metrics/BlockLength
 RSpec.describe TemperatureReportsController, type: :controller do
   let(:report) { create(:report) }
 
@@ -53,4 +54,5 @@ RSpec.describe TemperatureReportsController, type: :controller do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
 # rubocop:enable Metrics/LineLength
