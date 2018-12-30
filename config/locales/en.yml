@@ -47,3 +47,8 @@ en:
       delete: 'Delete Report'
     edit:
       update: 'Update Report'
+
+  temperature_reports:
+    new:
+      headline: 'New Temperature Report'
+      create: 'Create Temperature Report'

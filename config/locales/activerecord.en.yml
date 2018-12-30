@@ -2,11 +2,14 @@ en:
   activerecord:
     models:
       report: 'Report'
+      temperature_report: 'Temperature Report'
 
     attributes:
       report:
         title: 'Title'
         description: 'Description'
+      temperature_report:
+        title: 'Title'
 
     errors:
       messages:

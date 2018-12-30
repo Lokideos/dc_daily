@@ -2,11 +2,14 @@ ru:
   activerecord:
     models:
       report: 'Отчет'
+      temperature_report: 'Отчет о Температуре'
       
     attributes:
       report:
         title: 'Название'
         description: 'Описание'
+      temperature_report:
+        title: 'Название'
 
     errors:
       messages:
