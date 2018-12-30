@@ -2,6 +2,8 @@ ru:
   shared:
     errors:
       errors_counter:
+        few: '%{count} ошибки обнаружено:'
+        many: '%{count} ошибок обнаружено:'
         one: '%{count} ошибка обнаружена:'
         other: '%{count} ошибки обнаружено:'
 
