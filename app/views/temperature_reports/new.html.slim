@@ -1,5 +1,6 @@
 h1 New Temperature Report
 
+= render 'shared/errors', resource: temperature_report
 = form_with model: [report, temperature_report] do |f|
   = f.label :title
   = f.text_field :title
