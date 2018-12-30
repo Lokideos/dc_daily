@@ -5,6 +5,8 @@ class TemperatureReportsController < ApplicationController
 
   def show; end
 
+  def edit; end
+
   def create
     @temperature_report = report.temperature_reports.new(temperature_report_params)
 
@@ -13,6 +15,15 @@ class TemperatureReportsController < ApplicationController
     else
       flash[:notice] = 'There were some errors in your input.'
       render :new
+    end
+  end
+
+  def update
+    if temperature_report.update(temperature_report_params)
+      redirect_to temperature_report, notice: 'Temperature Report has been successfully updated.'
+    else
+      flash[:notice] = 'There were some errors in your input.'
+      render :edit
     end
   end
 
