@@ -8,7 +8,7 @@ feature 'User can edit the report', "
   I'd like to be able to edit the report
 " do
   given(:report) { create(:report) }
-  background { visit report_path(report) }
+  background { visit report_path(id: report, lang: 'en') }
 
   scenario 'User updates the report' do
     click_on 'Edit Report'

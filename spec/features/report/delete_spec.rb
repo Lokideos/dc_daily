@@ -8,7 +8,7 @@ feature 'User can delete the report', "
   I'd like to be able to delete the report
 " do
   given(:report) { create(:report) }
-  background { visit report_path(report) }
+  background { visit report_path(id: report, lang: 'en') }
 
   scenario 'User tries to delete the report' do
     click_on 'Delete Report'
