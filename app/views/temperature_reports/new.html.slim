@@ -1,0 +1,7 @@
+h1 New Temperature Report
+
+= form_with model: [report, temperature_report] do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.submit 'Create Temperature Report'

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Report, type: :model do
+RSpec.describe TemperatureReport, type: :model do
   it { should validate_presence_of :title }
-  it { should have_many :temperature_reports }
+  it { should belong_to :report }
 end

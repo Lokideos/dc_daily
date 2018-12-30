@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class Report < ApplicationRecord
+class TemperatureReport < ApplicationRecord
   validates :title, presence: true
 
-  has_many :temperature_reports
+  belongs_to :report
 end
