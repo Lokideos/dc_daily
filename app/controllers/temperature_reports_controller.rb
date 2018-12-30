@@ -11,18 +11,18 @@ class TemperatureReportsController < ApplicationController
     @temperature_report = report.temperature_reports.new(temperature_report_params)
 
     if temperature_report.save
-      redirect_to temperature_report, notice: 'Temperature report has been successfully created.'
+      redirect_to temperature_report, notice: t('temperature_reports.notification.created')
     else
-      flash[:notice] = 'There were some errors in your input.'
+      flash[:notice] = t('common.invalid_attributes_error')
       render :new
     end
   end
 
   def update
     if temperature_report.update(temperature_report_params)
-      redirect_to temperature_report, notice: 'Temperature Report has been successfully updated.'
+      redirect_to temperature_report, notice: t('temperature_reports.notification.updated')
     else
-      flash[:notice] = 'There were some errors in your input.'
+      flash[:notice] = t('common.invalid_attributes_error')
       render :edit
     end
   end
