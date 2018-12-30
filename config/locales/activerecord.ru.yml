@@ -1,0 +1,13 @@
+ru:
+  activerecord:
+    models:
+      report: 'Отчет'
+      
+    attributes:
+      report:
+        title: 'Название'
+        description: 'Описание'
+
+    errors:
+      messages:
+        blank: 'не может быть пустым'

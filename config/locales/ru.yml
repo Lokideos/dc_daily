@@ -1,0 +1,20 @@
+ru:
+  shared:
+    errors:
+      errors_counter:
+        few: '%{count} ошибки обнаружено:'
+        many: '%{count} ошибок обнаружено:'
+        one: '%{count} ошибка обнаружена:'
+        other: '%{count} ошибки обнаружено:'
+
+  reports:
+    index:
+      headline: 'Все Отчеты'
+    new:
+      headline: 'Новый Отчет'
+      create: 'Создать Отчет'
+    show:
+      edit: 'Редактировать Отчет'
+      delete: 'Удалить Отчет'
+    edit:
+      update: 'Обновить Отчет'

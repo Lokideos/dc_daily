@@ -30,4 +30,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  shared:
+    errors:
+      errors_counter:
+        one: '%{count} error detected:'
+        other: '%{count} errors detected:'
+
+  reports:
+    index:
+      headline: 'All Reports'
+    new:
+      headline: 'New Report'
+      create: 'Create Report'
+    show:
+      edit: 'Edit Report'
+      delete: 'Delete Report'
+    edit:
+      update: 'Update Report'

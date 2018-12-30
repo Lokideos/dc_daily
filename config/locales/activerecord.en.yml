@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      report: 'Report'
+
+    attributes:
+      report:
+        title: 'Title'
+        description: 'Description'
+
+    errors:
+      messages:
+        blank: "can't be blank"
