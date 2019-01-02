@@ -1,7 +1,7 @@
 h1= t('.headline')
 
 = render 'shared/errors', resource: temperature_report
-= form_with model: [report, temperature_report] do |f|
+= form_with model: [report, temperature_report], local: true do |f|
   = f.label :title
   = f.text_field :title
 
