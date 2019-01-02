@@ -104,8 +104,8 @@ RSpec.describe ReportsController, type: :controller do
       it 'does not update the report' do
         report.reload
 
-        expect(report.title).to eq 'MyString'
-        expect(report.description).to eq 'MyText'
+        expect(report.title).to eq 'Report Title'
+        expect(report.description).to eq 'Report Description'
       end
 
       it 're-renders edit view' do
