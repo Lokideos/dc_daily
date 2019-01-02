@@ -12,9 +12,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = render 'shared/header'
+    
+    main
+      p = flash[:notice]
 
-    p = flash[:notice]
-
-    = yield
+      = yield
 
     = render 'shared/footer'
