@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :report do
-    title { 'MyString' }
-    description { 'MyText' }
+    title { 'Report Title' }
+    description { 'Report Description' }
 
     trait :invalid do
       title { nil }
