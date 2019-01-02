@@ -27,6 +27,12 @@ class TemperatureReportsController < ApplicationController
     end
   end
 
+  def destroy
+    temperature_report.destroy
+
+    redirect_to temperature_report.report, notice: 'Temperature Report has been successfully deleted.'
+  end
+
   private
 
   def temperature_report_params

@@ -80,12 +80,26 @@ RSpec.describe TemperatureReportsController, type: :controller do
 
       it 'does not change temperature report attributes' do
         temperature_report.reload
-        expect(temperature_report.title).to eq 'MyString'
+        expect(temperature_report.title).to eq 'Temperature Report Title'
       end
 
       it 're-renders edit view' do
         expect(response).to render_template :edit
       end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    let!(:temperature_report) { create(:temperature_report, report: report) }
+
+    it 'deletes the temperature report from the database' do
+      expect { delete :destroy, params: { id: temperature_report } }.to change(TemperatureReport, :count).by(-1)
+    end
+
+    it 'redirects to related report' do
+      delete :destroy, params: { id: temperature_report }
+
+      expect(response).to redirect_to report
     end
   end
 end

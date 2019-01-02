@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :temperature_report do
-    title { 'MyString' }
+    title { 'Temperature Report Title' }
     report
 
     trait :invalid do
