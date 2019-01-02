@@ -30,7 +30,7 @@ class TemperatureReportsController < ApplicationController
   def destroy
     temperature_report.destroy
 
-    redirect_to temperature_report.report, notice: 'Temperature Report has been successfully deleted.'
+    redirect_to temperature_report.report, notice: t('temperature_reports.notification.deleted')
   end
 
   private

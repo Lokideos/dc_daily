@@ -59,9 +59,12 @@ en:
     notification:
       created: 'Temperature report has been successfully created.'
       updated: 'Temperature Report has been successfully updated.'
+      deleted: 'Temperature Report has been successfully deleted.'
     new:
       headline: 'New Temperature Report'
       create: 'Create Temperature Report'
     edit:
       headline: 'Edit Temperature Report'
       update: 'Update Temperature Report'
+    show:
+      delete: 'Delete Temperature Report'
