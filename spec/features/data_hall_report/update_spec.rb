@@ -2,10 +2,10 @@
 
 require 'rails_helper'
 
-feature 'User can edit the Data Hall Report', "
+feature 'User can update the Data Hall Report', "
   In order to fix or edit information about the Data Hall Report
   As a User
-  I'd like to be able to edit the Data Hall Report
+  I'd like to be able to update the Data Hall Report
 " do
   given(:general_report) { create(:general_report) }
   given(:data_hall_report) { create(:data_hall_report) }

@@ -2,10 +2,10 @@
 
 require 'rails_helper'
 
-feature 'User can edit the General Report', "
+feature 'User can update the General Report', "
   In order to be able to fix mistakes in the General Report
   As a User
-  I'd like to be able to edit the General Report
+  I'd like to be able to update the General Report
 " do
   given(:general_report) { create(:general_report) }
   background { visit general_report_path(id: general_report, lang: 'en') }
