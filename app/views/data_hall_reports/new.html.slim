@@ -1,0 +1,8 @@
+h1= t('.headline')
+
+= render 'shared/errors', resource: data_hall_report
+= form_with model: [general_report, data_hall_report], local: true do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.submit t('.create')

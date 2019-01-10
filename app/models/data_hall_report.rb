@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class TemperatureReport < ApplicationRecord
+class DataHallReport < ApplicationRecord
   validates :title, presence: true
 
   belongs_to :general_report

@@ -1,0 +1,7 @@
+h1= t('.headline')
+= render 'shared/errors', resource: data_hall_report
+= form_with model: data_hall_report do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.submit t('.update')

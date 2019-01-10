@@ -55,16 +55,16 @@ en:
     edit:
       update: 'Update General Report'
 
-  temperature_reports:
+  data_hall_reports:
     notification:
-      created: 'Temperature report has been successfully created.'
-      updated: 'Temperature Report has been successfully updated.'
-      deleted: 'Temperature Report has been successfully deleted.'
+      created: 'Data Hall Report has been successfully created.'
+      updated: 'Data Hall Report has been successfully updated.'
+      deleted: 'Data Hall Report has been successfully deleted.'
     new:
-      headline: 'New Temperature Report'
-      create: 'Create Temperature Report'
+      headline: 'New Data Hall Report'
+      create: 'Create Data Hall Report '
     edit:
-      headline: 'Edit Temperature Report'
-      update: 'Update Temperature Report'
+      headline: 'Edit Data Hall Report '
+      update: 'Update Data Hall Report '
     show:
-      delete: 'Delete Temperature Report'
+      delete: 'Delete Data Hall Report '

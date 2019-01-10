@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   scope '(:lang)', lang: /en|ru/ do
     resources :general_reports do
-      resources :temperature_reports, shallow: true, except: %i[index]
+      resources :data_hall_reports, shallow: true, except: %i[index]
     end
   end
 

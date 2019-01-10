@@ -1,14 +1,14 @@
 ru:
   activerecord:
     models:
-      report: 'Отчет'
-      temperature_report: 'Отчет о Температуре'
+      general_report: 'Главный Отчет'
+      data_hall_report: 'Отчет по Машинному Залу'
       
     attributes:
-      report:
+      general_report:
         title: 'Название'
         description: 'Описание'
-      temperature_report:
+      data_hall_report:
         title: 'Название'
 
     errors:
