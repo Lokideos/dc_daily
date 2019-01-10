@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_10_121239) do
+ActiveRecord::Schema.define(version: 2019_01_10_130634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "data_hall_reports", force: :cascade do |t|
+    t.string "title", null: false
+    t.bigint "general_report_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["general_report_id"], name: "index_data_hall_reports_on_general_report_id"
+  end
 
   create_table "general_reports", force: :cascade do |t|
     t.string "title", null: false
@@ -22,13 +30,5 @@ ActiveRecord::Schema.define(version: 2019_01_10_121239) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "temperature_reports", force: :cascade do |t|
-    t.string "title", null: false
-    t.bigint "general_report_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["general_report_id"], name: "index_temperature_reports_on_general_report_id"
-  end
-
-  add_foreign_key "temperature_reports", "general_reports"
+  add_foreign_key "data_hall_reports", "general_reports"
 end

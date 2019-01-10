@@ -3,5 +3,5 @@
 class GeneralReport < ApplicationRecord
   validates :title, presence: true
 
-  has_many :temperature_reports, dependent: :destroy
+  has_many :data_hall_reports, dependent: :destroy
 end

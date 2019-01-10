@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :temperature_report do
-    title { 'Temperature Report Title' }
+  factory :data_hall_report do
+    title { 'Data Hall Report Title' }
     general_report
 
     trait :invalid do

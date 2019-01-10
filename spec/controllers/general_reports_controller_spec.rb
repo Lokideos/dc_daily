@@ -10,7 +10,7 @@ RSpec.describe GeneralReportsController, type: :controller do
 
     before { get :index }
 
-    it 'populates an array of general_reports' do
+    it 'populates an array of General Reports' do
       expect(assigns(:general_reports)).to match_array(general_reports)
     end
 
@@ -49,11 +49,11 @@ RSpec.describe GeneralReportsController, type: :controller do
 
   describe 'POST #create' do
     context 'with valid attributes' do
-      it 'saves the general_report in the database' do
+      it 'saves the  General Report in the database' do
         expect { post :create, params: { general_report: attributes_for(:general_report) } }.to change(GeneralReport, :count).by(1)
       end
 
-      it 'redirects to newly created general_report' do
+      it 'redirects to newly created General Report' do
         post :create, params: { general_report: attributes_for(:general_report) }
 
         expect(response).to redirect_to assigns(:general_report)
@@ -61,7 +61,7 @@ RSpec.describe GeneralReportsController, type: :controller do
     end
 
     context 'with invalid attributes' do
-      it 'does not save the general_report in the database' do
+      it 'does not save the General Report in the database' do
         expect { post :create, params: { general_report: attributes_for(:general_report, :invalid) } }.to_not change(GeneralReport, :count)
       end
 
@@ -77,13 +77,13 @@ RSpec.describe GeneralReportsController, type: :controller do
     let(:general_report) { create(:general_report) }
 
     context 'with valid attributes' do
-      it 'assign the correct question' do
+      it 'assign the correct General Report' do
         patch :update, params: { id: general_report, general_report: attributes_for(:general_report) }
 
         expect(assigns(:general_report)).to eq assigns(:general_report)
       end
 
-      it 'updates the general_report attributes' do
+      it 'updates the General Report attributes' do
         patch :update, params: { id: general_report, general_report: { title: 'New Report Title', description: 'New Report Description' } }
         general_report.reload
 
@@ -91,7 +91,7 @@ RSpec.describe GeneralReportsController, type: :controller do
         expect(assigns(:general_report).description).to eq 'New Report Description'
       end
 
-      it 'redirects to update general_report' do
+      it 'redirects to update General Report' do
         patch :update, params: { id: general_report, general_report: { title: 'New Report Title' } }
 
         expect(response).to redirect_to assigns(:general_report)
@@ -101,7 +101,7 @@ RSpec.describe GeneralReportsController, type: :controller do
     context 'with invalid attributes' do
       before { patch :update, params: { id: general_report, general_report: attributes_for(:general_report, :invalid) } }
 
-      it 'does not update the general_report' do
+      it 'does not update the General Report' do
         general_report.reload
 
         expect(general_report.title).to eq 'General Report Title'
@@ -117,7 +117,7 @@ RSpec.describe GeneralReportsController, type: :controller do
   describe 'DELETE #destroy' do
     let!(:general_report) { create(:general_report) }
 
-    it 'deletes the general_report from the database' do
+    it 'deletes the General Report from the database' do
       expect { delete :destroy, params: { id: general_report } }.to change(GeneralReport, :count).by(-1)
     end
 

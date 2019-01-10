@@ -2,13 +2,13 @@ en:
   activerecord:
     models:
       report: 'Report'
-      temperature_report: 'Temperature Report'
+      data_hall_report: 'Data Hall Report'
 
     attributes:
       report:
         title: 'Title'
         description: 'Description'
-      temperature_report:
+      data_hall_report:
         title: 'Title'
 
     errors:
