@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+
+  font-family: 'Open Sans', Helventica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #000000;
+
+  background-color: #69ABFF;
+}
+
+.centring-container {
+  width: 1080px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-page-container {
+  min-height: 500px;
+}

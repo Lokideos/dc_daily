@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(asset_path('fonts/opensans.woff2')) format('woff2'),
+       url(asset_path('fonts/opensans.woff')) format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(asset_path('fonts/opensanslight.woff2')) format('woff2'),
+       url(asset_path('fonts/opensanslight.woff')) format('woff');
+  font-weight: 300;
+}

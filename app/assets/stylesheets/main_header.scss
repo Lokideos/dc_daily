@@ -1,0 +1,27 @@
+.page-header {
+  min-height: 200px;
+  margin-bottom: 40px;
+
+  color: #ffffff;
+
+  background-color: #0E407F;
+}
+
+.page-header .centring-container {
+  display: flex;
+}
+
+.page-header .logo {
+  width: 200px;
+  margin-right: auto;
+}
+
+.page-header-navigation {
+  width: 500px;
+  margin-right: auto;
+}
+
+page-header-navigation-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
