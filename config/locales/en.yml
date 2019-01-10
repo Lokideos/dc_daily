@@ -39,21 +39,21 @@ en:
   common:
     invalid_attributes_error: 'There were some errors in your input.'
 
-  reports:
+  general_reports:
     notification:
-      created: 'Report has been successfully created.'
-      updated: 'Report has been successfully updated.'
-      deleted: 'Report has been successfully deleted'
+      created: 'General Report has been successfully created.'
+      updated: 'General Report has been successfully updated.'
+      deleted: 'General Report has been successfully deleted'
     index:
-      headline: 'All Reports'
+      headline: 'All General Reports'
     new:
-      headline: 'New Report'
-      create: 'Create Report'
+      headline: 'New General Report'
+      create: 'Create General Report'
     show:
-      edit: 'Edit Report'
-      delete: 'Delete Report'
+      edit: 'Edit General Report'
+      delete: 'Delete General Report'
     edit:
-      update: 'Update Report'
+      update: 'Update General Report'
 
   temperature_reports:
     notification:

@@ -1,0 +1,6 @@
+h1= t('.headline');
+ul
+  - @general_reports.each do |general_report|
+    li
+      p= general_report.title
+      p= general_report.description

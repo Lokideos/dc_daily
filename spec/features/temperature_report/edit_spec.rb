@@ -2,17 +2,17 @@
 
 require 'rails_helper'
 
-feature 'User can edit the temperature report', "
-  In order to fix or edit information about the temperature report
+feature 'User can edit the temperature general_report', "
+  In order to fix or edit information about the temperature general_report
   As a User
-  I'd like to be able to edit the temperature report
+  I'd like to be able to edit the temperature general_report
 " do
-  given(:report) { create(:report) }
+  given(:general_report) { create(:general_report) }
   given(:temperature_report) { create(:temperature_report) }
 
   background { visit edit_temperature_report_path(id: temperature_report, lang: 'en') }
 
-  scenario 'User updates the temperature report' do
+  scenario 'User updates the temperature general_report' do
     fill_in 'Title', with: 'Updated Temperature Report'
     click_on 'Update Temperature Report'
 
@@ -20,7 +20,7 @@ feature 'User can edit the temperature report', "
     expect(page).to have_content 'Updated Temperature Report'
   end
 
-  scenario 'User tries to update the temperature report with invalid attributes' do
+  scenario 'User tries to update the temperature general_report with invalid attributes' do
     fill_in 'Title', with: ''
     click_on 'Update Temperature Report'
 

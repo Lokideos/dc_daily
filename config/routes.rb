@@ -2,11 +2,11 @@
 
 Rails.application.routes.draw do
   scope '(:lang)', lang: /en|ru/ do
-    resources :reports do
+    resources :general_reports do
       resources :temperature_reports, shallow: true, except: %i[index]
     end
   end
 
-  get '/:lang' => 'reports#index'
-  root to: 'reports#index'
+  get '/:lang' => 'general_reports#index'
+  root to: 'general_reports#index'
 end

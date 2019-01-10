@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :temperature_report do
     title { 'Temperature Report Title' }
-    report
+    general_report
 
     trait :invalid do
       title { nil }

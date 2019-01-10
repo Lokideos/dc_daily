@@ -12,7 +12,7 @@
 #   policy.script_src  :self, :https
 #   policy.style_src   :self, :https
 
-#   # Specify URI for violation reports
+#   # Specify URI for violation general_reports
 #   # policy.report_uri "/csp-violation-report-endpoint"
 # end
 
