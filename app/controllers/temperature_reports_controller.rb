@@ -8,7 +8,7 @@ class TemperatureReportsController < ApplicationController
   def edit; end
 
   def create
-    @temperature_report = report.temperature_reports.new(temperature_report_params)
+    @temperature_report = general_report.temperature_reports.new(temperature_report_params)
 
     if temperature_report.save
       redirect_to temperature_report, notice: t('temperature_reports.notification.created')
@@ -30,7 +30,7 @@ class TemperatureReportsController < ApplicationController
   def destroy
     temperature_report.destroy
 
-    redirect_to temperature_report.report, notice: t('temperature_reports.notification.deleted')
+    redirect_to temperature_report.general_report, notice: t('temperature_reports.notification.deleted')
   end
 
   private
@@ -39,13 +39,15 @@ class TemperatureReportsController < ApplicationController
     params.require(:temperature_report).permit(:title)
   end
 
-  def report
-    @report ||= params[:report_id] ? Report.find(params[:report_id]) : temperature_report.report
+  # rubocop:disable Metrics/LineLength
+  def general_report
+    @general_report ||= params[:general_report_id] ? GeneralReport.find(params[:general_report_id]) : temperature_report.general_report
   end
+  # rubocop:enable Metrics/LineLength
 
   def temperature_report
-    @temperature_report ||= params[:id] ? TemperatureReport.find(params[:id]) : report.temperature_reports.new
+    @temperature_report ||= params[:id] ? TemperatureReport.find(params[:id]) : general_report.temperature_reports.new
   end
 
-  helper_method :report, :temperature_report
+  helper_method :general_report, :temperature_report
 end

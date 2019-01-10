@@ -1,0 +1,11 @@
+h1= general_report.title
+
+= render 'shared/errors', resource: general_report
+= form_with model: general_report, local: true do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :description
+  = f.text_area :description
+
+  = f.submit t('.update')

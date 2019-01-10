@@ -3,5 +3,5 @@
 class TemperatureReport < ApplicationRecord
   validates :title, presence: true
 
-  belongs_to :report
+  belongs_to :general_report
 end

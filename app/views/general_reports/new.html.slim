@@ -1,7 +1,7 @@
 h1= t('.headline')
 
-= render 'shared/errors', resource: report
-= form_with model: report, local: true do |f|
+= render 'shared/errors', resource: general_report
+= form_with model: general_report, local: true do |f|
   = f.label :title
   = f.text_field :title
 

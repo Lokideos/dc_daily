@@ -8,6 +8,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Report.create([{ title: 'Templars Report', description: 'You must construct additional pylons.' },
-               { title: 'Marines Report', description: 'You must construct additional supply depos' },
-               { title: 'Overmind Report', description: 'Need more overlors' }])
+GeneralReport.create([{ title: 'Templars Report', description: 'You must construct additional pylons.' },
+                      { title: 'Marines Report', description: 'You must construct additional supply depos' },
+                      { title: 'Overmind Report', description: 'Need more overlors' }])
