@@ -11,7 +11,7 @@ feature 'User can create Data Hall Report', "
 
   background { visit new_general_report_data_hall_report_path(general_report_id: general_report, lang: 'en') }
 
-  scenario 'User creates the general_report' do
+  scenario 'User creates the Data Hall Report' do
     fill_in 'Title', with: 'Data Hall Report'
     click_on 'Create Data Hall Report'
 
