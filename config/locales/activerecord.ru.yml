@@ -1,11 +1,11 @@
 ru:
   activerecord:
     models:
-      report: 'Отчет'
+      general_report: 'Главный Отчет'
       data_hall_report: 'Отчет по Машинному Залу'
       
     attributes:
-      report:
+      general_report:
         title: 'Название'
         description: 'Описание'
       data_hall_report:

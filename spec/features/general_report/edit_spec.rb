@@ -2,15 +2,15 @@
 
 require 'rails_helper'
 
-feature 'User can edit the general_report', "
-  In order to be able to fix mistakes in the general_report
+feature 'User can edit the General Report', "
+  In order to be able to fix mistakes in the General Report
   As a User
-  I'd like to be able to edit the general_report
+  I'd like to be able to edit the General Report
 " do
   given(:general_report) { create(:general_report) }
   background { visit general_report_path(id: general_report, lang: 'en') }
 
-  scenario 'User updates the general_report' do
+  scenario 'User updates the General Report' do
     click_on 'Edit General Report'
     fill_in 'Title', with: 'New General Report Title'
     click_on 'Update General Report'
@@ -19,7 +19,7 @@ feature 'User can edit the general_report', "
     expect(page).to have_content 'New General Report Title'
   end
 
-  scenario 'User tries to update the general_report with invalid attributes' do
+  scenario 'User tries to update the General Report with invalid attributes' do
     click_on 'Edit General Report'
     fill_in 'Title', with: ''
     click_on 'Update General Report'

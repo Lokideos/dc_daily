@@ -1,11 +1,11 @@
 en:
   activerecord:
     models:
-      report: 'Report'
+      general_report: 'General Report'
       data_hall_report: 'Data Hall Report'
 
     attributes:
-      report:
+      general_report:
         title: 'Title'
         description: 'Description'
       data_hall_report:
