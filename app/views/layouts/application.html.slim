@@ -1,11 +1,21 @@
 doctype html
 html
   head
-    title DcDaily
+    meta charset="utf-8" /
+    title DC Daily
+    meta name="keywords" content="dc datacenter report engineer" /
+    meta name="description" content="DC Daily report is a Web App built to help engineers in their daily DC routine" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p = flash[:notice]
-    = yield
+    = render 'shared/header'
+    
+    main.centring-container.main-page-container
+      p = flash[:notice]
+
+      = yield
+
+    = render 'shared/footer'

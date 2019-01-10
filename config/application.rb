@@ -21,6 +21,8 @@ module DcDaily
     config.i18n.default_locale = :en
     config.time_zone = 'Moscow'
 
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
     config.generators do |g|
       g.test_framework :rspec,
                        view_specs: false,
