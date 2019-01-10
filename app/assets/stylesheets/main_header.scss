@@ -24,4 +24,20 @@
 .page-header-navigation-menu {
   display: flex;
   flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.page-header-navigation-menu  a {
+  color: #ffffff;
+}
+
+.page-header-navigation-menu  a:hover,
+.page-header-navigation-menu  a:focus {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.page-header-navigation-menu  a:active {
+  opacity: 0.3;
 }
