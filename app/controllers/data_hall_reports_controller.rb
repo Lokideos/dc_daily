@@ -39,11 +39,9 @@ class DataHallReportsController < ApplicationController
     params.require(:data_hall_report).permit(:title)
   end
 
-  # rubocop:disable Metrics/LineLength
   def general_report
     @general_report ||= params[:general_report_id] ? GeneralReport.find(params[:general_report_id]) : data_hall_report.general_report
   end
-  # rubocop:enable Metrics/LineLength
 
   def data_hall_report
     @data_hall_report ||= params[:id] ? DataHallReport.find(params[:id]) : general_report.data_hall_reports.new

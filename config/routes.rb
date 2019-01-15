@@ -3,7 +3,9 @@
 Rails.application.routes.draw do
   scope '(:lang)', lang: /en|ru/ do
     resources :general_reports do
-      resources :data_hall_reports, shallow: true, except: %i[index]
+      resources :data_hall_reports, shallow: true, except: %i[index] do
+        resources :data_halls, shallow: true, except: %i[index]
+      end
     end
   end
 

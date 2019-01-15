@@ -1,0 +1,11 @@
+h1 New Data Hall
+
+= render 'shared/errors', resource: data_hall
+= form_with model: [data_hall_report, data_hall], local: true do |f|
+  = f.label :title
+  = f.text_field :title
+
+  = f.label :description
+  = f.text_area :description
+
+  = f.submit 'Create'
