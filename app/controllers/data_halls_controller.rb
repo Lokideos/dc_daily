@@ -27,6 +27,11 @@ class DataHallsController < ApplicationController
     end
   end
 
+  def destroy
+    data_hall.destroy
+    redirect_to data_hall_report, notice: 'Data Hall has been successfully deleted.'
+  end
+
   private
 
   def data_hall_params

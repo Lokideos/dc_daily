@@ -96,5 +96,18 @@ RSpec.describe DataHallsController, type: :controller do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    let!(:data_hall) { create(:data_hall) }
+
+    it 'deletes the data hall from database' do
+      expect { delete :destroy, params: { id: data_hall } }.to change(DataHall, :count).by(-1)
+    end
+
+    it 'redirects to related data hall report' do
+      delete :destroy, params: { id: data_hall }
+      expect(response).to redirect_to assigns(:data_hall_report)
+    end
+  end
 end
 # rubocop:enable Metrics/BlockLength
