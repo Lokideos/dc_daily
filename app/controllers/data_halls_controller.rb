@@ -11,25 +11,25 @@ class DataHallsController < ApplicationController
     @data_hall = data_hall_report.data_halls.new(data_hall_params)
 
     if data_hall.save
-      redirect_to data_hall, notice: 'You have successfully created Data Hall.'
+      redirect_to data_hall, notice: t('.notification.created')
     else
-      flash[:notice] = 'There were some errors in your input.'
+      flash[:notice] = t('common.invalid_attributes_error')
       render :new
     end
   end
 
   def update
     if data_hall.update(data_hall_params)
-      redirect_to data_hall, notice: 'You have successfully updated the Data Hall.'
+      redirect_to data_hall, notice: t('.notification.updated')
     else
-      flash[:notice] = 'There were some errors in your input.'
+      flash[:notice] = t('common.invalid_attributes_error')
       render :edit
     end
   end
 
   def destroy
     data_hall.destroy
-    redirect_to data_hall_report, notice: 'Data Hall has been successfully deleted.'
+    redirect_to data_hall_report, notice: t('.notification.deleted')
   end
 
   private

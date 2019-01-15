@@ -68,3 +68,18 @@ en:
       update: 'Update Data Hall Report '
     show:
       delete: 'Delete Data Hall Report '
+
+  data_halls:
+    notification:
+      created: 'You have successfully created Data Hall.'
+      updated: 'You have successfully updated the Data Hall.'
+      deleted: 'Data Hall has been successfully deleted.'
+    new:
+      headline: 'New Data Hall'
+      create: 'Create'
+    edit:
+      headline: 'Edit Data Hall'
+      update: 'Update'
+    show:
+      headline: 'Data Hall'
+      delete: 'Delete Data Hall'

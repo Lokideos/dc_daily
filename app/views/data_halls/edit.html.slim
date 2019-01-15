@@ -1,4 +1,4 @@
-h1 Edit Data Hall
+h1= t('.headline')
 
 = render 'shared/errors', resource: data_hall
 = form_with model: data_hall, local: true do |f|
@@ -8,4 +8,4 @@ h1 Edit Data Hall
   = f.label :description
   = f.text_area :description
 
-  = f.submit 'Update'
+  = f.submit t('.update')

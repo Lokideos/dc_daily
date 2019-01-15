@@ -3,6 +3,7 @@ en:
     models:
       general_report: 'General Report'
       data_hall_report: 'Data Hall Report'
+      data_hall: 'Data Hall'
 
     attributes:
       general_report:
@@ -10,6 +11,9 @@ en:
         description: 'Description'
       data_hall_report:
         title: 'Title'
+      data_hall:
+        title: 'Title'
+        description: 'Description'
 
     errors:
       messages:
