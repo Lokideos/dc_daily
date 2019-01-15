@@ -3,6 +3,7 @@ ru:
     models:
       general_report: 'Главный Отчет'
       data_hall_report: 'Отчет по Машинному Залу'
+      data_hall: 'Машинный Зал'
       
     attributes:
       general_report:
@@ -10,6 +11,9 @@ ru:
         description: 'Описание'
       data_hall_report:
         title: 'Название'
+      data_hall:
+        title: 'Название'
+        description: 'Описание'
 
     errors:
       messages:
