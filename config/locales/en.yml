@@ -67,7 +67,9 @@ en:
       headline: 'Edit Data Hall Report '
       update: 'Update Data Hall Report '
     show:
+      data_halls_section_headline: 'Data Halls'
       delete: 'Delete Data Hall Report '
+      to_data_hall: 'To Data Hall'
 
   data_halls:
     notification:
