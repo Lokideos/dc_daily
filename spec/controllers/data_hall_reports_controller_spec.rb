@@ -17,7 +17,13 @@ RSpec.describe DataHallReportsController, type: :controller do
   end
 
   describe 'GET #show' do
+    let(:data_halls) { create_list(:data_hall, 3, data_hall_report: data_hall_report) }
+
     before { get :show, params: { id: data_hall_report } }
+
+    it 'assigns all existing data halls to data_halls' do
+      expect(assigns(:data_halls)).to eq data_halls
+    end
 
     it 'renders show view' do
       expect(response).to render_template :show

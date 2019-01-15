@@ -1,2 +1,10 @@
 h1= data_hall_report.title
 p= link_to t('.delete'), data_hall_report_path, method: :delete
+
+section.data-halls
+  h2 Data Halls
+
+  - @data_halls.each do |data_hall|
+    p= data_hall.title
+    p= data_hall.description
+    p= link_to 'To Data Hall', data_hall_path(data_hall)

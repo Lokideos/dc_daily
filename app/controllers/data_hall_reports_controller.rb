@@ -3,7 +3,9 @@
 class DataHallReportsController < ApplicationController
   def new; end
 
-  def show; end
+  def show
+    @data_halls = data_hall_report.data_halls
+  end
 
   def edit; end
 
