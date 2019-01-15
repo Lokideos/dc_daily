@@ -38,7 +38,9 @@ ru:
       headline: 'Редактирование Отчет по Машинному Залу'
       update: 'Обновить Отчет по Машинному Залу'
     show:
+      data_halls_section_headline: 'Машинные Залы'
       delete: 'Удалить Отчет по Машинному Залу'
+      to_data_hall: 'Перейти в Зал'
 
   data_halls:
     notification:
