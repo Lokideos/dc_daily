@@ -5,6 +5,8 @@ class DataHallsController < ApplicationController
 
   def show; end
 
+  def edit; end
+
   def create
     @data_hall = data_hall_report.data_halls.new(data_hall_params)
 
@@ -13,6 +15,15 @@ class DataHallsController < ApplicationController
     else
       flash[:notice] = 'There were some errors in your input.'
       render :new
+    end
+  end
+
+  def update
+    if data_hall.update(data_hall_params)
+      redirect_to data_hall, notice: 'You have successfully updated the Data Hall.'
+    else
+      flash[:notice] = 'There were some errors in your input.'
+      render :edit
     end
   end
 

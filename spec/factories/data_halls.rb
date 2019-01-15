@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :data_hall do
-    title { 'Data Hall Tilte' }
+    title { 'Data Hall Title' }
     description { 'Data Hall Description' }
     data_hall_report
 
